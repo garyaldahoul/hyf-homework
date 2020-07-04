@@ -1,0 +1,238 @@
+body {
+  position: relative;
+  top: 100px;
+}
+/******** style the CV photo ******/
+img {
+  position: relative;
+  top: -100px;
+  width: 100%;
+  border-radius: 50%;
+  z-index: 100;
+}
+main section {
+  margin: 10px;
+  padding: 15px;
+}
+
+section h2 {
+  color: rgb(133, 130, 130);
+  letter-spacing: 10px;
+  text-align: center;
+  margin: 10px;
+  padding: 20px 10px;
+}
+
+/********** contact ***********/
+
+.contact div {
+  cursor: pointer;
+  margin: 10px;
+  padding: 15px;
+}
+
+#content-section {
+  background-color: #eee;
+  color: #000;
+}
+
+.content {
+  position: relative;
+  text-align: center;
+  font-size: 1.1em;
+}
+
+.content h2 {
+  color: rgb(133, 130, 130);
+  letter-spacing: 10px;
+}
+
+.contact i {
+  margin-right: 30px;
+}
+
+/******************** education **************/
+#education-section {
+  height: 400px;
+  position: relative;
+  background-color: #eee;
+  color: #000;
+}
+
+.education {
+  width: 70%;
+  margin: 10px;
+  padding: 15px;
+  margin-left: 25px;
+}
+
+.education span {
+  display: block;
+}
+
+/******************** Skills **************/
+
+#skills-section {
+  position: relative;
+  background-color: #eee;
+  color: #000;
+}
+
+#skills-section div {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px;
+  padding: 5px;
+}
+/*** style icon ***/
+
+.fa-circle {
+  font-size: small;
+  display: inline;
+}
+
+/*********************   aside  ********/
+aside {
+  margin: 15px;
+  padding: 25px;
+}
+
+#name,
+#my-job {
+  text-align: center;
+}
+
+.line-after-name {
+  width: 50px;
+  margin: 0 auto;
+}
+
+.jobs {
+  margin: 10px;
+  padding: 15px;
+  background-color: #eee;
+}
+
+@media (min-width: 800px) {
+  body {
+    position: relative;
+    top: 100px;
+  }
+  #right {
+    width: 40%;
+    float: left;
+  }
+
+  #left {
+    width: 60%;
+    float: right;
+  }
+  img {
+    position: relative;
+    top: -100px;
+    width: 100%;
+    border-radius: 50%;
+    z-index: 100;
+  }
+
+  section h2 {
+    color: rgb(133, 130, 130);
+    letter-spacing: 10px;
+    text-align: center;
+    margin: 10px;
+    padding: 20px 10px;
+  }
+
+  /********** contact ***********/
+
+  .contact div {
+    cursor: pointer;
+    margin: 10px;
+    padding: 15px;
+  }
+
+  #content-section {
+    background-color: #eee;
+    color: #000;
+  }
+
+  .content {
+    position: relative;
+    text-align: center;
+    font-size: 1.1em;
+  }
+
+  .content h2 {
+    color: rgb(133, 130, 130);
+    letter-spacing: 10px;
+  }
+
+  .contact i {
+    margin-right: 30px;
+  }
+
+  /******************** education **************/
+  #education-section {
+    height: 400px;
+    position: relative;
+    background-color: #eee;
+    color: #000;
+  }
+
+  .education {
+    width: 70%;
+    margin: 10px;
+    padding: 15px;
+    margin-left: 25px;
+  }
+
+  .education span {
+    display: block;
+  }
+
+  /******************** Skills **************/
+
+  #skills-section {
+    position: relative;
+    background-color: #eee;
+    color: #000;
+  }
+
+  #skills-section div {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+    padding: 5px;
+  }
+  .fa-circle {
+    font-size: small;
+    display: inline;
+  }
+
+  main section {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  /*********************   aside  ********/
+  aside {
+    margin: 15px;
+    padding: 25px;
+  }
+
+  #name,
+  #my-job {
+    text-align: center;
+  }
+
+  .line-after-name {
+    width: 50px;
+    margin: 0 auto;
+  }
+
+  .jobs {
+    margin: 10px;
+    padding: 15px;
+    background-color: #eee;
+  }
+}
