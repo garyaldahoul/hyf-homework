@@ -1,4 +1,8 @@
 Superman
 Mona
 Trolls
+<<<<<<< HEAD
 Aladdin
+=======
+Spiderman
+>>>>>>> 7ea8c3a558562013c22e52fd448a366aee67f21b
