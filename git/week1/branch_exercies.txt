@@ -1,0 +1,25 @@
+14_ countries.txt (Sweden - Denmark)
+15_ create countries.txt and add countries
+16_ countries.txt (Sweden -  Denmark - Italy - Spain)
+17_ two comments:
+	1_ add more countries
+	2_ create countries.txt and add countries
+18_ two files:
+	1_ cities.txt (Copenhagen - Lund)
+	2_ countries.txt (Sweden - Denmark - Italy - Spain)
+19_ three comments:
+	1_ create cities.txt file and add two cities
+	2_ add more countries
+	3_ create countries.txt and add more countries
+22_ one file : countries.txt ( Sweden - Denmark- Italy - Spain)
+23_ two comments:
+	1_ add more countries
+	2_ create countries.txt and add countries
+25_ two files:
+	1_ cities.txt (Copenhagen - Lund)
+	2_ countries.txt (Sweden - Denmark - Italy - Spain)
+26_ three comments:
+	1_ create cities.txt file and add two cities
+	2_ add more countries
+	3_ create countries.txt and add countries 
+
