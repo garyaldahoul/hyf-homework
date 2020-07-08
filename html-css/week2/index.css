@@ -4,6 +4,14 @@ h3 {
   text-transform: uppercase;
 }
 
+/**************** header //// main /// gallery logo container  ****************/
+header,
+main,
+.gallery-logo-img-container {
+  padding: 15px;
+  margin: 10px;
+}
+
 header p {
   color: gray;
 }
@@ -22,6 +30,8 @@ nav ul li {
   cursor: pointer;
 }
 
+/************* big image ****************/
+
 .big-img {
   width: 100%;
   max-height: 400px;
@@ -31,6 +41,7 @@ nav ul li {
   left: 0px;
 }
 
+/***********************logo container **************/
 .logo-img-container {
   display: inline;
 }
@@ -39,13 +50,8 @@ nav ul li {
   margin: 5px;
   padding: 10px;
 }
-header,
-main,
-.gallery-logo-img-container {
-  padding: 15px;
-  margin: 10px;
-}
 
+/************************  footer ****************/
 footer {
   line-height: 1.5em;
   padding-top: 1em;
@@ -64,6 +70,7 @@ footer ul > li + li {
   margin: 5px 20px;
   padding: 15px;
 }
+/****************** Map *******************/
 #map {
   width: 150px;
   height: 150px;
@@ -75,6 +82,7 @@ footer ul li:last-child {
 }
 
 @media (min-width: 800px) {
+  /********************  hearder ****************/
   nav ul {
     list-style: none;
     display: flex;
@@ -82,7 +90,15 @@ footer ul li:last-child {
     padding-bottom: 0px;
     margin: 0px;
   }
-
+  /****************  header /// main /// gallery logo container  ****************/
+  header,
+  footer,
+  main,
+  .gallery-logo-img-container,
+  footer {
+    padding: 15px 75px 15px 125px;
+  }
+  /*************** main container ************/
   .main-container,
   .gallery-logo-img-container {
     display: grid;
@@ -95,14 +111,7 @@ footer ul li:last-child {
     margin: 5px;
     padding-right: 20px;
   }
-
-  header,
-  footer,
-  main,
-  .gallery-logo-img-container,
-  footer {
-    padding: 15px 75px 15px 125px;
-  }
+  /*************** logo image *********/
   .logo-img {
     width: 100px;
     margin: 5px;
@@ -122,6 +131,8 @@ footer ul li:last-child {
   .logo-img-container {
     display: inline;
   }
+
+  /********* footer ***********/
   footer {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
@@ -144,6 +155,7 @@ footer ul li:last-child {
     border-bottom: 1px solid #666;
     padding: 5px;
   }
+  /**************** map ***************/
   #map {
     width: 150px;
     height: 150px;
