@@ -1,0 +1,400 @@
+body {
+  margin: 10px;
+  padding: 20px;
+  line-height: 2em;
+  font-size: 1.3em;
+}
+
+/**************** header / logo / nav /  ***********************/
+h1 {
+  letter-spacing: 2px;
+}
+.logo-navigation-div {
+  display: flex;
+  justify-content: space-between;
+}
+.nav-div {
+  width: 550px;
+  height: 100px;
+  background-color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.center-nav {
+  margin: 0;
+}
+header {
+  margin-bottom: 15px;
+  padding-bottom: 2em;
+}
+
+/************************ progress *********************/
+.progress {
+  height: 50px;
+  border: 1px solid #000;
+}
+.process {
+  background-color: #eee;
+  width: 7%;
+  height: 50px;
+  border-right: 1px solid #000;
+}
+
+/************************** special progress *****************/
+/*
+.meter {
+  height: 20px;   
+  position: relative;
+  background: #555;
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+  padding: 10px;
+  box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
+}
+.meter > span {
+  display: block;
+  height: 100%;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color: rgb(43, 194, 83);
+  background-image: linear-gradient(
+    center bottom,
+    rgb(43, 194, 83) 37%,
+    rgb(84, 240, 84) 69%
+  );
+  box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.3),
+    inset 0 -2px 6px rgba(0, 0, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.meter > span:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, 0.2) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0.2) 75%,
+    transparent 75%,
+    transparent
+  );
+  z-index: 1;
+  background-size: 50px 50px;
+  animation: move 2s linear infinite;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  overflow: hidden;
+}
+
+.animate > span:after {
+  display: none;
+}
+
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+.meter > span:after,
+.animate > span > span {
+  animation: move 2s linear infinite;
+}
+*/
+
+/************************* information div name / address **************/
+
+.info-div {
+  margin: 10px;
+  padding: 15px;
+  padding-bottom: 2em;
+}
+.right,
+.left {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px;
+  padding: 10px;
+}
+
+input {
+  width: 60%;
+  height: 40px;
+  padding: 5px;
+  margin-left: 15px;
+}
+
+label {
+  display: block;
+  font-size: 1.2em;
+}
+
+/******************************** textarea ************/
+.flex-div {
+  padding-bottom: 2em;
+}
+
+.flex-div p {
+  font-size: 16px;
+  line-height: normal;
+}
+.textarea-div {
+  width: 80%;
+}
+textarea {
+  width: 100%;
+  height: 150px;
+}
+
+/***************************** checkbox *****************/
+input[type="checkbox"] {
+  width: 50px;
+  height: 50px;
+}
+
+.shipping-address-div {
+  display: flex;
+  padding-bottom: 2em;
+}
+
+/**************************** button ********************/
+#nextStepButton {
+  display: block;
+  width: 300px;
+  height: 100px;
+  margin: 10px auto;
+  padding: 15px;
+  font-size: 1.1em;
+}
+.shipping-address-div label {
+  margin: 0px;
+}
+
+/* --------width : 800px ---------- down width 600px overwrite ------*/
+@media (min-width: 800px) {
+  body {
+    margin: 10px;
+    padding: 15px;
+    line-height: 2em;
+    font-size: 1.5em;
+  }
+
+  /**************** header / logo / nav /  ***********************/
+
+  h1 {
+    letter-spacing: 3px;
+  }
+  .logo-navigation-div {
+    display: flex;
+    justify-content: space-between;
+  }
+  .nav-div {
+    width: 550px;
+    height: 100px;
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .center-nav {
+    margin: 0;
+  }
+  .sign-parg {
+    width: 70%;
+  }
+
+  /***************** progress ****************/
+  .progress {
+    height: 50px;
+  }
+  .process {
+    background-color: #eee;
+    width: 7%;
+    height: 50px;
+  }
+
+  /******************* information **************/
+  .info-div,
+  .flex-div {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  .right {
+    width: 50%;
+    justify-content: flex-start;
+    margin: 10px 0px;
+  }
+  .left {
+    width: 50%;
+    justify-content: flex-end;
+    margin: 10px 0px;
+  }
+
+  .name-div div,
+  .address-div div,
+  .country-div div {
+    display: flex;
+  }
+  .country-div {
+    justify-content: flex-end;
+  }
+  .name-div,
+  .address-div {
+    display: inline;
+  }
+  .country .left {
+    margin: 0px -50px;
+  }
+  input {
+    width: 60%;
+    height: 40px;
+    padding: 5px;
+  }
+  .na-add {
+    padding: 15px;
+    margin: 10px;
+  }
+  label {
+    font-size: 1.1em;
+    margin-right: 25px;
+  }
+
+  /********************* textarea ********************/
+
+  .flex-div {
+    display: flex;
+  }
+  .flex-div p {
+    font-size: 16px;
+    line-height: normal;
+    width: 75%;
+  }
+  .textarea-div {
+    width: 80%;
+  }
+  textarea {
+    width: 67%;
+    padding: 25px;
+    height: 150px;
+  }
+
+  .textarea-par-div {
+    width: 20%;
+  }
+
+  /************************* checkbox *****************/
+  input[type="checkbox"] {
+    width: 50px;
+    height: 50px;
+  }
+
+  .button-div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .button-div div {
+    display: flex;
+  }
+
+  /********************** button *********************/
+  #nextStepButton {
+    width: 300px;
+    height: 100px;
+    margin: 10px;
+    padding: 15px;
+    font-size: 1.1em;
+  }
+  .shipping-address-div {
+    margin-left: 20px;
+    padding-left: 20px;
+  }
+}
+@media only screen and(min-width: 600px) and( max-width: 1000px) {
+  /******************* information **************/
+  .info-div,
+  .flex-div {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  .right {
+    width: 50%;
+    justify-content: flex-start;
+    margin: 10px 0px;
+  }
+  .left {
+    width: 50%;
+    justify-content: flex-end;
+    margin: 10px 0px;
+  }
+
+  .name-div div,
+  .address-div div,
+  .country-div div {
+    display: flex;
+  }
+  .country-div {
+    justify-content: flex-end;
+  }
+  .name-div,
+  .address-div {
+    display: inline;
+  }
+  .country .left {
+    margin: 0px -50px;
+  }
+  input {
+    width: 60%;
+    height: 40px;
+    padding: 5px;
+  }
+  .na-add {
+    padding: 15px;
+    margin: 10px;
+  }
+  label {
+    font-size: 1.1em;
+    margin-right: 25px;
+  }
+}
+/****************************** width 600 px *************/
+@media (max-width: 600px) {
+  .left,
+  .right {
+    display: block;
+  }
+  input {
+    display: block;
+    width: 80%;
+  }
+  label {
+    display: block;
+  }
+  .shipping-address-div label {
+    margin: 0px;
+  }
+}
+
+/******************* asterik *******************/
+.asterik {
+  color: #f00;
+  font-size: 25px;
+}
