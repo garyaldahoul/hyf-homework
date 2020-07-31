@@ -37,6 +37,7 @@ const depth = document.getElementById("depth");
 const height = document.getElementById("height");
 const gardenSize = document.getElementById("gardenSize");
 const priceHouseButton = document.getElementById("priceHouseButton");
+const wantedPrice = document.getElementById("wantedPrice");
 
 const showRightPrice = document.getElementById("showRightPrice");
 
@@ -47,31 +48,65 @@ function rightPriceForHouse() {
   const volumeInMeters =
     width.value * depth.value * height.value * 2.5 * 1000 +
     gardenSize.value * 300;
-  showRightPrice.innerHTML =
-    "The right price for the house is : " + volumeInMeters;
+
+  let result =
+    wantedPrice.value > volumeInMeters
+      ? `The apartment is very expensive and the right price is ${volumeInMeters} $`
+      : `It is a good price. The right price is ${volumeInMeters} $. You will save ${
+          volumeInMeters - wantedPrice.value
+        } $`;
+  showRightPrice.innerHTML = result;
 
   showRightPrice.classList.add("show");
-  return volumeInMeters;
+  return result;
 }
 
 // Ez Namey (Startup name generator) Optional
 
-let firstNamesArray = ["honey", "love", "sweet", "Yammmmiy", "lolo"];
-let secondNamesArray = ["Gary", "ismailo", "Nana", "inyea", "soso"];
+const showNameGenerator = document.getElementById("showNameGenerator");
+const firstNamesArray = [
+  "honey",
+  "love",
+  "sweet",
+  "Yammmmiy",
+  "lolo",
+  "smart",
+  "strong",
+  "best",
+  "Gary",
+  "HYF",
+];
+const secondNamesArray = [
+  "Gary",
+  "ismailo",
+  "Nana",
+  "inyea",
+  "soso",
+  "HYF",
+  "lolo",
+  "change",
+  "life",
+  "way",
+];
 
-const randomNumber = Math.floor(Math.random() * 10) + 0;
+let newFirstNameArray = [...firstNamesArray];
+let newSecondNameArray = [...secondNamesArray];
+function startUpNameGenerator() {
+  showNameGenerator.innerHTML = "";
+  for (let i = 0; i < newFirstNameArray.length; i++) {
+    const randomNumberF = Math.floor(Math.random() * newFirstNameArray.length);
+    const randomNumberS = Math.floor(Math.random() * newSecondNameArray.length);
+    const generateName = document.createElement("div");
+    generateName.classList.add("application");
+    generateName.innerHTML = `
+    ${newFirstNameArray[randomNumberF]} ${newSecondNameArray[randomNumberS]}`;
+    newFirstNameArray.splice(randomNumberF, 1);
+    newSecondNameArray.splice(randomNumberS, 1);
+    i = -1;
+    showNameGenerator.appendChild(generateName);
+  }
 
-// write down the output from the console, then check if you are right or not by putting them in the console
-console.log(typeof 3);
-console.log(typeof -33);
-console.log(typeof "3");
-const threeConst = 3;
-console.log(threeConst);
-let threeLet = 3;
-console.log(threeLet);
-console.log(typeof 'console.log("console.log(console.log(""))")');
-console.log(typeof typeof 45);
-const names = ["benjamin", "Christopher"];
-console.log(typeof names[0]);
-console.log(typeof [3][0]);
-console.log(typeof true);
+  newFirstNameArray = [...firstNamesArray];
+  newSecondNameArray = [...secondNamesArray];
+  return showNameGenerator;
+}
