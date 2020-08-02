@@ -45,15 +45,15 @@ priceHouseButton.addEventListener("click", rightPriceForHouse);
 
 function rightPriceForHouse() {
   // the price for the house without garden:
-  const volumeInMeters =
+  const price =
     width.value * depth.value * height.value * 2.5 * 1000 +
     gardenSize.value * 300;
 
   let result =
-    wantedPrice.value > volumeInMeters
-      ? `The apartment is very expensive and the right price is ${volumeInMeters} $`
-      : `It is a good price. The right price is ${volumeInMeters} $. You will save ${
-          volumeInMeters - wantedPrice.value
+    wantedPrice.value > price
+      ? `The apartment is very expensive and the right price is ${price} $`
+      : `It is a good price. The right price is ${price} $. You will save ${
+          price - wantedPrice.value
         } $`;
   showRightPrice.innerHTML = result;
 
