@@ -1,0 +1,58 @@
+input[type="text"],
+input[type="number"] {
+  display: block;
+  font-size: 1em;
+  width: 500px;
+  padding: 15px 20px;
+  margin: 10px auto;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3em;
+  color: #f00;
+}
+
+button {
+  display: block;
+  width: 300px;
+  height: 100px;
+  background-color: #0f0;
+  color: #fff;
+  font-size: 2em;
+  margin: 10px auto;
+  border-radius: 15px;
+}
+div {
+  margin: 0px auto;
+  text-align: center;
+}
+
+.show {
+  width: 50%;
+  font-size: 2em;
+  background-color: #0f0;
+  color: #fff;
+  padding: 15px;
+  margin: 0px auto;
+}
+
+.application {
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  background-color: #eee;
+  margin: 15px;
+  padding: 25px;
+}
+
+table {
+  background-color: #fff;
+  margin: 20px auto;
+  font-size: 1.3em;
+}
+
+td {
+  padding: 15px;
+  margin: 10px;
+}
