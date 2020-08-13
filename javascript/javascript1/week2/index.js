@@ -35,26 +35,27 @@ function fullFormalName(firstFormalName, surFormalName, useFormalName) {
 
 // Event Application
 
-const currentDate = new Date();
-console.log(currentDate);
-console.log(currentDate.getDay());
-const todayNumber = currentDate.getDay();
-console.log(todayNumber);
-
-const daysToEvent = document.getElementById("daysToEvent");
-const calcDaysToEventButton = document.getElementById("calcDaysToEventButton");
-const showDayOfEvent = document.getElementById("showDayOfEvent");
-const daysOfWeek = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wedesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-
 function calcDaysToEvent() {
+  const currentDate = new Date();
+  console.log(currentDate);
+  console.log(currentDate.getDay());
+  const todayNumber = currentDate.getDay();
+  console.log(todayNumber);
+
+  const daysToEvent = document.getElementById("daysToEvent");
+  const calcDaysToEventButton = document.getElementById(
+    "calcDaysToEventButton"
+  );
+  const showDayOfEvent = document.getElementById("showDayOfEvent");
+  const daysOfWeek = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wedesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
   const days = parseInt(todayNumber) + parseInt(daysToEvent.value);
   console.log(days);
   const daysOfEvent = daysOfWeek[days % 7];
@@ -99,35 +100,29 @@ function whatToWear(temperature) {
 
 const studentName = document.getElementById("studentName");
 const showStudentNumber = document.getElementById("showStudentNumber");
-let class015Students = [];
-function addStudentToClass(studentName) {
+const class015Students = [];
+const addStudentToClass = (studentName) => {
+  console.log(class015Students.length);
   let message = "";
-  studentName = studentName.value;
-  if (
-    studentName.toLowerCase() === "queen" &&
-    class015Students.includes("queen")
-  ) {
-    message = "Queen is already in class";
-  } else if (studentName.toLowerCase() === "queen") {
+  studentName = studentName.value.toLowerCase();
+  if (class015Students.includes(studentName)) {
+    message = `Student ${studentName} is already in the class015`;
+  } else if (studentName === "queen" && !class015Students.includes("queen")) {
     class015Students.push("queen");
-    message = `Queen always is welcome, we have ${class015Students.length} students`;
-  } else if (getNumberOfStudents() < 6) {
-    class015Students.push(studentName);
-    message = `${studentName} Join to the class, we have ${class015Students.length} students.`;
-  } else if (
-    class015Students.includes("queen") &&
-    class015Students.length === 7
-  ) {
-    message = `Sorry, We can get just 6 student and queen for class.We have ${
-      class015Students.length - 1
-    } students and queen in the class.`;
+    message = `Queen always is welcome`;
+  } else if (class015Students.length >= 6) {
+    message = "Cannot add more students to class015";
+  } else if (studentName === "") {
+    message = "Please enter Student name";
   } else {
-    message = `sorry, We can get just 6 student. We have ${class015Students.length} students.`;
+    class015Students.push(studentName);
+    message = `${studentName} Join to the class015, we have ${class015Students.length} students.`;
   }
+  console.log(class015Students);
   showStudentNumber.innerHTML = message;
   showStudentNumber.classList.add("show");
   return message;
-}
+};
 
 function getNumberOfStudents() {
   const studentsNumber = class015Students.length;
@@ -158,21 +153,23 @@ function canBuyMoreCandy() {
   console.log(sum);
   console.log(amounToSpend);
   if (amounToSpend <= sum) {
-    buyMoreCandy = "Sorry, You can't buy more candy";
+    buyMoreCandy = "Enough candy for you!";
+    showCanBuyMoreCandy.innerHTML = buyMoreCandy;
+    showCanBuyMoreCandy.classList.add("show");
+    return false;
   } else {
-    buyMoreCandy = "Yes, You can buy more candy";
+    buyMoreCandy = "You can buy more, so please do!";
+    showCanBuyMoreCandy.innerHTML = buyMoreCandy;
+    showCanBuyMoreCandy.classList.add("show");
+    return true;
   }
-
-  showCanBuyMoreCandy.innerHTML = buyMoreCandy;
-  showCanBuyMoreCandy.classList.add("show");
-  return buyMoreCandy;
 }
 
 function addCandy(candyType, weight) {
   let sum = boughtCandyPrices.reduce((a, b) => a + b, 0);
   candyType = candyType.value;
   weight = weight.value;
-  if (amounToSpend <= sum) {
+  if (canBuyMoreCandy() === false) {
     showBoughtCandy.innerHTML = "Sorry, You can't buy more candy";
   } else if (candyType.toLowerCase() === "sweet") {
     let sweetPrice = candyPrices.sweet * weight;
