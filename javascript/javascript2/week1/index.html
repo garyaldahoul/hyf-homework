@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS2/ Week 1</title>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+  </head>
+  <body>
+    <!--                 Find The Shortest Word            -->
+    <div>
+      <h1>Find The Shortest Word</h1>
+
+      <input
+        id="yourText"
+        type="text"
+        name="yourText"
+        placeholder="Enter The Text, Please..."
+      />
+
+      <button id="getShortestWordButton" onClick="getShortestWord()">
+        The Shortest Word
+      </button>
+      <div id="showShortestWord"></div>
+    </div>
+
+    <!---                   Find And Count The Danish Letters      -->
+
+    <div>
+      <h1>Find And Count The Danish Letters</h1>
+
+      <input
+        id="danishText"
+        type="text"
+        name="danishText"
+        placeholder="Enter Danish Text,Please..."
+      />
+      <button id="countDanishLettersButton" onClick="countDanishLetters()">
+        Count The Dnish Letters
+      </button>
+      <div id="showDanishLetters"></div>
+    </div>
+
+    <!--             Spirit Animal Name Generator           -->
+
+    <div>
+      <h1>Spirit Animal Name Generator</h1>
+      <input
+        id="name"
+        type="text"
+        name="name"
+        placeholder="Enter Your Name,Please..."
+      />
+      <p>Choose How You Want To Create Spirit Animal Name</p>
+      <input
+        type="radio"
+        name="forCreateSpiritAnimalName"
+        value="clickButton"
+      />Clcik Button
+      <input
+        type="radio"
+        name="forCreateSpiritAnimalName"
+        value="hoverUpOnField"
+      />Hover Up On Field
+      <input
+        type="radio"
+        name="forCreateSpiritAnimalName"
+        value="writeInField"
+      />Wirte in field
+      <button id="spiritAnimalNameButton">
+        Get Your Spirit Name Animal
+      </button>
+
+      <div id="showSpiritAnimalName"></div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
