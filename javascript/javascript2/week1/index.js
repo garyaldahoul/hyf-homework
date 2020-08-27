@@ -3,31 +3,11 @@
 // Just for >>>>>>>>>>>console
 
 const danishWords = ["bil", "plante", "kaffe", "bog", "ø", "planetarium"];
-/*we can create array and add the word to it from the input and check which one is the shortest one
-const words = [];
-const word = document.getElementById("word");
 
-function addWords() {
-  word = word.value;
-  words.push(word);
-}
-document
-  .getElementById("shortestWordButton")
-  .addEventListener("click", (words) => {
-    getShortestDanishWord(words);
-  });
-
-  */
 function getShortestDanishWord(array) {
   let shortestWord = "";
   shortestWordLength = array[0].length;
   for (let i = 0; i < array.length; i++) {
-    /*
-    if (array[i].length < shortestWordLength) {
-      shortestWordLength = array[i].length;
-      shortestWord = array[i];
-    }
-    */
     array[i].length < shortestWordLength &&
       (shortestWordLength = array[i].length) &&
       (shortestWord = array[i]);
@@ -47,17 +27,11 @@ function getShortestWord() {
   let shortestWord = "";
   shortestWordLength = wordsArray[0].length;
   for (let i = 0; i < wordsArray.length; i++) {
-    /*
-    if (wordsArray[i].length < shortestWordLength) {
-      shortestWordLength = wordsArray[i].length;
-      shortestWord = wordsArray[i];
-    }
-    */
     wordsArray[i].length < shortestWordLength &&
       (shortestWordLength = wordsArray[i].length) &&
       (shortestWord = wordsArray[i]);
   }
-  showShortestWord.innerHTML = `The Shortest Wrod is ${shortestWord} has ${shortestWordLength} letters.`;
+  showShortestWord.innerHTML = `The Shortest Word is ${shortestWord} has ${shortestWordLength} letters.`;
   return showShortestWord;
 }
 
@@ -133,7 +107,7 @@ function spiritAnimalNameGenerator() {
     return (showSpiritAnimalName.innerHTML = spiritName);
   } else {
     console.log("there is no more animls spirit names.");
-    showSpiritAnimalName.innerHTML = "there is no more animls spirit names.";
+    showSpiritAnimalName.innerHTML = "There is no more animal spirit names.";
   }
 }
 
