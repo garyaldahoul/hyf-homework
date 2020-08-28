@@ -104,7 +104,6 @@ function calculateTime(travelInformation) {
   const minutesTravel = Math.floor((timeTravel - hourTravel) * 60);
   showTime.innerHTML = `${hourTravel} Hour and ${minutesTravel} Minutes`;
   showTime.classList.add("show");
-  return showTime;
 }
 
 // Series Duration Of My Life
