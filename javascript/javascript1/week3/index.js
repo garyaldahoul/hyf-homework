@@ -98,10 +98,11 @@ const travelInformation = {
 function calculateTime(travelInformation) {
   travelInformation.speed = speed.value;
   travelInformation.destinationDistance = destinationDistance.value;
-  const time = travelInformation.destinationDistance / travelInformation.speed;
-  const hour = Math.floor(time);
-  const minutes = Math.floor((time - hour) * 60);
-  showTime.innerHTML = `${hour} Hour and ${minutes} Minutes`;
+  const timeTravel =
+    travelInformation.destinationDistance / travelInformation.speed;
+  const hourTravel = Math.floor(timeTravel);
+  const minutesTravel = Math.floor((timeTravel - hourTravel) * 60);
+  showTime.innerHTML = `${hourTravel} Hour and ${minutesTravel} Minutes`;
   showTime.classList.add("show");
   return showTime;
 }
@@ -138,14 +139,23 @@ function addSeries() {
     minutesArray.push(parseInt(seriesDuration[i].minutes));
   }
 
-  let allMinutes = minutesArray.reduce((a, b) => a + b, 0);
+  let allMinutes = minutesArray.reduce(
+    (accumulator, currentValue) => accumulator + currentValue,
+    0
+  );
   let howManyMinutes = allMinutes % 60;
 
   let allHours =
-    hoursArray.reduce((a, b) => a + b, 0) + Math.floor(allMinutes / 60);
+    hoursArray.reduce(
+      (accumulator, currentValue) => accumulator + currentValue,
+      0
+    ) + Math.floor(allMinutes / 60);
   let howManyHours = allHours % 24;
   let howManyDays =
-    daysArray.reduce((a, b) => a + b, 0) + Math.floor(allHours / 24);
+    daysArray.reduce(
+      (accumulator, currentValue) => accumulator + currentValue,
+      0
+    ) + Math.floor(allHours / 24);
 
   console.log(howManyDays, howManyHours, howManyMinutes);
   const fullSeriesTime =
@@ -173,7 +183,10 @@ function showSeriesInformation() {
       yourLifeInminutes
     ).toFixed(3);
     minutesSeriesTimeArray.push(yourSpendTime);
-    let totalMinutes = minutesSeriesTimeArray.reduce((a, b) => a + b, 0);
+    let totalMinutes = minutesSeriesTimeArray.reduce(
+      (accumulator, currentValue) => accumulator + currentValue,
+      0
+    );
     console.log(minutesSeriesTimeArray);
     let avrage = ((totalMinutes * 100) / yourLifeInminutes).toFixed(3);
     let allInformation = document.createTextNode(
@@ -196,7 +209,7 @@ const showSpecificNote = document.getElementById("showSpecificNote");
 
 let notes = [];
 
-// Saving a note
+// Saving  note
 
 function saveNote() {
   const savingNote = {};
@@ -255,7 +268,7 @@ function addActivity() {
     allDurationArray.push(parseInt(activities[i].duration));
   }
   totalDuration = allDurationArray.reduce(
-    (a, b) => a + b,
+    (accumulator, currentValue) => accumulator + currentValue,
     parseInt(duration.value)
   );
   console.log(totalDuration);
@@ -298,7 +311,10 @@ function showStatus() {
   for (let i = 0; i < activities2.length; i++) {
     allDurationArray2.push(parseInt(activities2[i].duration));
   }
-  totalDuration2 = allDurationArray2.reduce((a, b) => a + b, 0);
+  totalDuration2 = allDurationArray2.reduce(
+    (accumulator, currentValue) => accumulator + currentValue,
+    0
+  );
 
   message =
     activities2.length === 0
