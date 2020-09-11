@@ -231,9 +231,9 @@ const showCounterL = document.getElementById("showCounterL");
 const showCounterS = document.getElementById("showCounterS");
 const downSecond = document.getElementById("downSecond");
 
-startGameButton.addEventListener("click", work);
+startGameButton.addEventListener("click", startGame);
 
-function work() {
+function startGame() {
   const counter = [];
   const counterL = [];
   const counterS = [];
@@ -252,8 +252,8 @@ function work() {
     }, i * 1000);
   }
 
-  document.addEventListener("keypress", functionWork);
-  function functionWork(e) {
+  document.addEventListener("keypress", countingPress);
+  function countingPress(e) {
     e.preventDefault();
     let value = String.fromCharCode(e.keyCode);
     value.toLowerCase() === "l" &&
@@ -304,7 +304,7 @@ function work() {
       firstPlayer.setAttribute("class", "gray");
       secondPlayer.setAttribute("class", "gray");
     }
-    document.removeEventListener("keypress", functionWork);
+    document.removeEventListener("keypress", countingPress);
   }, gameTime);
   showCounterL.innerHTML = "";
   showCounterS.innerHTML = "";
