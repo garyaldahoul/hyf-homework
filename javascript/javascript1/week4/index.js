@@ -6,7 +6,7 @@
 const personalInformation = {
   name: "",
   age: "",
-  adress: "you didn't add address",
+  address: "you didn't add address",
 };
 const todos = [];
 
@@ -15,7 +15,7 @@ const daysOfWeek = [
   "Sunday",
   "Monday",
   "Tuesday",
-  "Wedesday",
+  "Wednesday",
   "Thursday",
   "Friday",
   "Saturday",
@@ -156,9 +156,9 @@ function runSpeechRecognition() {
           if you want add two numbers use order addition,
           if you want reduce one number from another use subtraction,
           if you want multiple numbers use multiplication,
-          if you want divide two numbers use divsion`;
+          if you want divide two numbers use division`;
     } else if (
-      /additoin/gi.test(transcript) ||
+      /addition/gi.test(transcript) ||
       /plus/gi.test(transcript) ||
       /plas/gi.test(transcript) ||
       /place/gi.test(transcript)
@@ -178,8 +178,8 @@ function runSpeechRecognition() {
       console.log(additionArray);
     } else if (
       /set a timer for/gi.test(transcript) ||
-      /set timmer/gi.test(transcript) ||
-      /timmer/gi.test(transcript)
+      /set timer/gi.test(transcript) ||
+      /timer/gi.test(transcript)
     ) {
       console.log("change to second and put timer, use word to number");
     }
