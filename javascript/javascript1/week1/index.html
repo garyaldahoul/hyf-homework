@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript 1 /week 1</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <!-- The calc age assigement -->
+    <div class="application">
+      <h1>CALC AGES</h1>
+      <div>
+        <label>Enter Your Birth Year</label>
+        <input
+          id="birthYear"
+          type="number"
+          name="age"
+          placeholder="Enter your age year birth..."
+        />
+      </div>
+      <div>
+        <label>Enter the year that you want check your old on it: </label>
+        <input
+          id="selectedYear"
+          type="number"
+          name="yearSelect"
+          placeholder="Enter year that you want check your old onit..."
+        />
+      </div>
+      <button id="calcAgeButton" onClick="calcAge()">
+        Calc Age
+      </button>
+      <div id="showYear"></div>
+    </div>
+    <br />
+
+    <!-- The calc dog age assigement-->
+    <div class="application">
+      <h1>CALC DOG AGE</h1>
+      <div>
+        <label>Enter your dog birthday </label>
+        <input
+          id="dogYearOfBrith"
+          type="number"
+          name="dogYearOfBirth"
+          placeholder="Enter your dog year birth..."
+        />
+      </div>
+      <div>
+        <label
+          >Enter the year that you want to check your dog's old on it :
+        </label>
+        <input
+          id="dogYearFuture"
+          type="number"
+          name="dogYearFuture"
+          placeholder="Enter year that you want check your dog's old onit..."
+        />
+      </div>
+      <div class="dog-human-years-checkbox-div">
+        <div>
+          <input id="dogYears" type="radio" name="years" value="7" /> Dog years
+        </div>
+        <div>
+          <input id="humanYears" type="radio" name="years" value="1" /> Human
+          years
+        </div>
+      </div>
+      <button id="calcDogHumanAgeButton" onClick="calcDogHumanAge()">
+        Calc Age
+      </button>
+      <div id="showAge"></div>
+    </div>
+
+    <!-- The house price assigement -->
+    <div class="application">
+      <h1>Housey pricey (A house price estimator)</h1>
+      <div>
+        <label>Enter the wide</label>
+        <input
+          id="width"
+          type="number"
+          name="width"
+          placeholder="Enter Width..."
+        />
+      </div>
+      <div>
+        <label>Enter the deep</label>
+        <input
+          id="depth"
+          type="number"
+          name="depth"
+          placeholder="Enter Depth..."
+        />
+      </div>
+      <div>
+        <label>Enter the height</label>
+        <input
+          id="height"
+          type="number"
+          name="height"
+          placeholder="Enter Height..."
+        />
+      </div>
+      <div>
+        <label>Enter the garden size</label>
+        <input
+          id="gardenSize"
+          type="number"
+          name="gardenSize"
+          placeholder="Enter Gardern Size..."
+        />
+      </div>
+      <div>
+        <label>How much money they wanted price for the apartment ?</label>
+        <input
+          id="wantedPrice"
+          type="number"
+          name="wantedPrice"
+          placeholder="The Wanted price..."
+        />
+      </div>
+      <button id="priceHouseButton">The right price</button>
+      <div id="showRightPrice"></div>
+    </div>
+
+    <!-- Ez Namey (Startup name generator) Optional-->
+
+    <div class="name-generator-application">
+      <button onclick="startUpNameGenerator() ">Start Up Name Generator</button>
+      <div id="showNameGenerator"></div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
