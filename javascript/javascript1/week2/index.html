@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascipt1/Week 2</title>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+  </head>
+  <body>
+    <div class="application">
+      <h1>Flight Booking Fullname function</h1>
+      <input
+        id="firstName"
+        type="text"
+        name="firstName"
+        placeholder="Enter Your First Name, Please..."
+        required
+      />
+      <input
+        id="surName"
+        type="text"
+        name="surName"
+        placeholder="Enter Your sur Name, Please..."
+        required
+      />
+      <button id="fullNameButton" onClick="fullName()">
+        Get The Full Name
+      </button>
+      <div id="showFullName"></div>
+    </div>
+
+    <div class="application">
+      <h1>Formal Full Name</h1>
+
+      <input
+        id="firstFormalName"
+        type="text"
+        name="firstFormalName"
+        placeholder="Enter Your First Name, Please..."
+      />
+      <input
+        id="surFormalName"
+        type="text"
+        name="surFormalName"
+        placeholder="Enter Your sur Name, Please..."
+      />
+
+      <input id="useFormalName" type="checkbox" name="useFormalName" />Adressed
+      formally
+      <button
+        id="fullFormalNameButton"
+        onClick="fullFormalName(firstFormalName, surFormalName, useFormalName)"
+      >
+        Get The Full Name
+      </button>
+      <div id="showFullFormalName"></div>
+    </div>
+
+    <div class="application">
+      <h1>Event Application</h1>
+      <input
+        id="daysToEvent"
+        type="number"
+        name="daysToEvent"
+        placeholder="How many day for event..."
+      />
+      <button id="calcDaysToEventButton" onClick="calcDaysToEvent()">
+        Calc The Days
+      </button>
+      <div id="showDayOfEvent"></div>
+    </div>
+
+    <!-- Weather Wear -->
+
+    <div class="application">
+      <h1>Weather wear</h1>
+
+      <input
+        id="temperature"
+        type="number"
+        name="temperature"
+        placeholder="Enter the temeprature, Please..."
+      />
+      <button id="whatToWearButton" onClick="whatToWear(temperature)">
+        What Should I Wear Today
+      </button>
+      <div id="showWhatToWear"></div>
+    </div>
+    <!-- Student Manager -->
+
+    <div class="application">
+      <h1>Student manager</h1>
+
+      <input
+        id="studentName"
+        type="text"
+        name="studentName"
+        placeholder="Enter student's name..."
+      />
+      <button id="studentNameButton" onClick="addStudentToClass(studentName)">
+        Add Student To Class
+      </button>
+      <div id="showStudentNumber"></div>
+    </div>
+
+    <!--  Candy Shop -->
+
+    <div class="application">
+      <h1>Candy Shop</h1>
+      <div>
+        <table>
+          <tr>
+            <th>Candy Type</th>
+            <td>Sweet</td>
+            <td>Chocolate</td>
+            <td>Toffee</td>
+            <td>Chewing-gum</td>
+          </tr>
+          <tr>
+            <th>Price Per Gram</th>
+            <td>0.5</td>
+            <td>0.7</td>
+            <td>1.1</td>
+            <td>0.03</td>
+          </tr>
+        </table>
+      </div>
+      <input
+        id="candyType"
+        type="text"
+        name="candyType"
+        placeholder="Enter the candy type..."
+      />
+      <input
+        id="weight"
+        type="number"
+        name="weight"
+        placeholder="Enter weight..."
+      />
+      <button id="candyPriceButton" onClick="addCandy(candyType,weight)">
+        Candy Price
+      </button>
+      <div id="showBoughtCandy"></div>
+      <button id="canBuyMoreCandyButton" onClick="canBuyMoreCandy()">
+        Can I Buy More Candy
+      </button>
+      <div id="showCanBuyMoreCandy"></div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
